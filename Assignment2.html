@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Application Form</h1>
+    <p>Fields marked with * are required</p>
+    <div class="form-card1">
+      <div class="section badge">A. General Information</div>
+      <form>
+        <div class="Form-row">
+          <div class="Form-group">
+            <label for="FullName"
+              >Proposed Insured's Full Name
+              <span class="required">*</span></label
+            >
+            <input type="text" id="FullName" />
+          </div>
+          <div class="Form-group">
+            <label for="Birthdate"
+              >Birth Date <span class="required">*</span></label
+            >
+            <input type="date" id="Birthdate" placeholder="mm/dd/yyyy" />
+          </div>
+          <div class="Radio-group">
+            <span>Gender</span>
+            <label class="Radio-label">
+              <input type="radio" name="gender" value="male" /> male
+            </label>
+            <label class="Radio-label">
+              <input type="radio" name="gender" value="female" /> female
+            </label>
+          </div>
+           <div class="Form-row">
+          <div class="Form-group" full-width>
+            <label for="Address"
+              >Address
+              <span class="required">*</span></label
+            >
+        
+            <textarea id="Address" rows="3"></textarea>
+          </div>
+               <div class="Form-row">
+          <div class="Form-group">
+            <label for="phone"
+              >Phone number
+              <span class="required">*</span></label
+            >
+            <input type="number" id="phone" placeholder="+92 300 1234567" />
+          </div>
+               <div class="Form-row">
+          <div class="Form-group">
+            <label for="Email"
+              >Email Address
+              <span class="required">*</span></label
+            >
+            <input type="email" id="Email" placeholder="abc@example.com"/>
+          </div>
+               <div class="Form-row">
+          <div class="Form-group">
+            <label for="cnic"
+              >ID/CNIC Number
+              <span class="required">*</span></label
+            >
+            <input type="text" id="cnic" placeholder="42101-1234567-3"/>
+          </div>
+               <div class="Form-row">
+          <div class="Form-group">
+            <label for="Social-security"
+              >Social security / Refrence Number
+              </label
+            >
+            <input type="number" id="Social-security" />
+          </div>
+                 <div class="Form-row">
+          <div class="Form-group">
+            <label for="martial-status"
+              >Martial Status
+              <span class="required">*</span></label
+            >
+           
+            <select id="maritalStatus">
+                        <option value="" disabled selected>Select status</option>
+                        <option value="single">Single</option>
+                        <option value="married">Married</option>
+                        <option value="divorced">Divorced</option>
+                        <option value="widowed">Widowed</option>
+                    </select>
+           
+          </div>
+          <div class="form-group">
+                    <label for="occupation">Occupation <span class="required">*</span></label>
+                    <input type="text" id="occupation" placeholder="">
+                </div>
+                <div class="form-row">
+                <div class="form-group">
+                    <label>Are you retired?<span class="required">*</span></label>
+                    <div class="radio-group-container">
+                        <label class="radio-label">
+                            <input type="radio" name="retired" value="yes"> Yes
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="retired" value="no"> No
+                        </label>
+                    </div>
+                </div>
+                <div class="form-card">
+        <div class="section-badge">B. Type of Health Coverage</div>
+
+        <form>
+            <div class="coverage-block">
+                <div class="form-group">
+                    <label>Employee Coverage</label>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="employee_coverage" value="yes"> Yes</label>
+                        <label class="radio-label"><input type="radio" name="employee_coverage" value="no"> No</label>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 15px;">
+                    <label for="employeePlan">Employee Plan Choice</label>
+                    <select id="employeePlan">
+                        <option value="" disabled selected>Select plan</option>
+                        <option value="standard">Standard Plan</option>
+                        <option value="premium">Premium Plan</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="coverage-block">
+                <div class="form-group">
+                    <label>Spouse Coverage</label>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="spouse_coverage" value="yes"> Yes</label>
+                        <label class="radio-label"><input type="radio" name="spouse_coverage" value="no"> No</label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="spousePlan">Spouse Plan Choice</label>
+                    <select id="spousePlan">
+                        <option value="" disabled selected>Select plan</option>
+                        <option value="standard">Standard Plan</option>
+                        <option value="premium">Premium Plan</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="coverage-block">
+                <div class="form-group">
+                    <label>Children Coverage</label>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="children_coverage" value="yes"> Yes</label>
+                        <label class="radio-label"><input type="radio" name="children_coverage" value="no"> No</label>
+                    </div>
+                </div>
+                <div class="form-group" style="margin-top: 15px;">
+                    <label for="childrenPlan">Children Plan Choice</label>
+                    <select id="childrenPlan">
+                        <option value="" disabled selected>Select plan</option>
+                        <option value="standard">Standard Plan</option>
+                        <option value="premium">Premium Plan</option>
+                    </select>
+                </div>
+                <div class="form-card">
+        <div class="section-badge">C. Spouse / Children Information</div>
+
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="dependentName">Dependent Name</label>
+                    <input type="text" id="dependentName">
+                </div>
+                <div class="form-group">
+                    <label for="idSsn">ID / SSN</label>
+                    <input type="text" id="idSsn">
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="relationship">Relationship</label>
+                    <select id="relationship">
+                        <option value="" disabled selected>Select relationship</option>
+                        <option value="spouse">Spouse</option>
+                        <option value="child">Child</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="birthDate">Birth Date</label>
+                    <input type="date" id="birthDate">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="age">Age</label>
+                    <input type="text" id="age">
+                </div>
+                <div class="form-group">
+                    <label for="gender">Gender</label>
+                    <select id="gender">
+                        <option value="" disabled selected>Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+      
+                
+        </div>
+        <div class="form-card">
+        <div class="section-badge">D. Policy Information</div>
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="units">Units</label>
+                    <input type="text" id="units">
+                </div>
+                <div class="form-group">
+                    <label for="annualPremium">Annual Premium</label>
+                    <input type="text" id="annualPremium">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group full-width">
+                    <label for="paymentMode">Payment Mode <span class="required">*</span></label>
+                    <select id="paymentMode">
+                        <option value="" disabled selected>Select payment mode</option>
+                        <option value="monthly">Monthly</option>
+                        <option value="quarterly">Quarterly</option>
+                        <option value="annually">Annually</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="cashWithApp">Cash With Application</label>
+                    <input type="text" id="cashWithApp">
+                </div>
+                <div class="form-group">
+                    <label for="monthlyPremium">Planned Monthly Premium</label>
+                    <input type="text" id="monthlyPremium">
+                </div>
+            </div>
+        </form>
+    </div>
+        <div class="section-badge">E. Required Document</div>
+        <form>
+            <div class="form-row">
+                <div class="form-group">
+                    <p>
+                        Please attach your supporting document before submitting the application.
+                    </p>
+                    <label for="attachDoc">Attach Document <span class="required">*</span></label>
+                    <input type="file" id="attachDoc">
+                    <div class="helper-text">Accepted formats: PDF, JPG, JPEG and PNG</div>
+                </div>
+                <div class="section-badge">F. Declaration</div>
+                <input type="checkbox" id="declarationCheck">
+                <label for="declarationCheck">I confirm that the information provided in this application is complete and accurate.</label>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="signature">Applicant Full Name / Signature <span class="required">*</span></label>
+                    <input type="text" id="signature">
+                </div>
+                <div class="form-group">
+                    <label for="appDate">Application Date <span class="required">*</span></label>
+                    <input type="date" id="appDate">
+                </div>
+            </div>
+            </div>
+
+    </form>
+    </div>
+    <div class="form-actions">
+        <button type="reset" class="clear">Clear Form</button>
+        <button type="submit" class="submit">Submit Application</button>
+    </div>
+  </body>
+</html>
