@@ -3,44 +3,20 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Apex Global Academy - Excellence in Education</title>
-    <!-- Google Fonts for typography -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <!-- FontAwesome for clean iconography -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
+    <title>Bean & Brew Cafe | Modern Coffee Shop</title>
 
     <style>
-      /* CSS Reset & Global Variables */
       * {
+        box-sizing: border-box;
         margin: 0;
         padding: 0;
-        box-sizing: border-box;
-      }
-
-      :root {
-        --primary-navy: #0f172a;
-        --accent-gold: #f59e0b;
-        --accent-gold-hover: #d97706;
-        --bg-light: #f8fafc;
-        --text-dark: #334155;
-        --text-light: #64748b;
-        --white: #ffffff;
-        --border-color: #e2e8f0;
-        --transition: all 0.3s ease;
       }
 
       body {
-        font-family: "Plus Jakarta Sans", sans-serif;
-        color: var(--text-dark);
-        background-color: var(--bg-light);
+        font-family: "Poppins", sans-serif;
+        background-color: #faf6f0;
+        color: #2d2424;
         line-height: 1.6;
-        overflow-x: hidden;
       }
 
       a {
@@ -48,1158 +24,487 @@
         color: inherit;
       }
 
-      ul {
-        list-style: none;
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
       }
 
-      /* Header & Navigation Bar */
       header {
-        background-color: var(--white);
-        border-bottom: 1px solid var(--border-color);
+        background-color: #3c2a21;
+        color: #ffffff;
+        padding: 1rem 2rem;
         position: sticky;
         top: 0;
-        z-index: 1000;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        z-index: 100;
       }
 
-      .navbar {
-        max-width: 1280px;
+      .nav-container {
+        max-width: 1100px;
         margin: 0 auto;
-        padding: 1rem 2rem;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap;
       }
 
-      .logo-container {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-      }
-
-      .logo-icon {
-        background: linear-gradient(135deg, var(--primary-navy), #1e293b);
-        color: var(--accent-gold);
-        width: 45px;
-        height: 45px;
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.25rem;
-        font-weight: 800;
-        box-shadow: 0 4px 10px rgba(15, 23, 42, 0.2);
-      }
-
-      .logo-text h1 {
-        font-size: 1.25rem;
-        font-weight: 800;
-        color: var(--primary-navy);
-        letter-spacing: -0.5px;
-      }
-
-      .logo-text span {
-        font-size: 0.75rem;
-        color: var(--text-light);
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #e5ba73;
       }
 
       .nav-links {
+        list-style: none;
         display: flex;
-        align-items: center;
-        gap: 2rem;
-        flex-wrap: wrap;
+        gap: 1.5rem;
       }
 
       .nav-links a {
-        font-weight: 600;
         font-size: 0.95rem;
-        color: var(--text-dark);
-        transition: var(--transition);
-        position: relative;
+        font-weight: 500;
+        transition: color 0.3s ease;
       }
 
-      .nav-links a:hover,
-      .nav-links a.active {
-        color: var(--accent-gold);
+      .nav-links a:hover {
+        color: #e5ba73;
       }
 
-      .nav-cta {
-        background-color: var(--primary-navy);
-        color: var(--white) !important;
-        padding: 0.6rem 1.25rem;
-        border-radius: 8px;
-        transition: var(--transition);
-      }
-
-      .nav-cta:hover {
-        background-color: var(--accent-gold) !important;
-        color: var(--primary-navy) !important;
-      }
-
-      /* Hero Section */
       .hero {
-        background: linear-gradient(
-          135deg,
-          var(--primary-navy) 0%,
-          #1e293b 100%
-        );
-        color: var(--white);
-        padding: 6rem 2rem;
-        position: relative;
-        overflow: hidden;
+        background-color: #e5ba73;
+        color: #2d2424;
+        padding: 4rem 2rem;
       }
 
-      .hero-container {
-        max-width: 1280px;
+      .hero-grid {
+        max-width: 1100px;
         margin: 0 auto;
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
         align-items: center;
-        justify-content: space-between;
-        gap: 4rem;
-        flex-wrap: wrap;
       }
 
-      .hero-content {
-        flex: 1;
-        min-width: 300px;
-      }
-
-      .hero-badge {
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        background: rgba(245, 158, 11, 0.15);
-        color: var(--accent-gold);
-        padding: 0.4rem 1rem;
-        border-radius: 50px;
-        font-size: 0.85rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        border: 1px solid rgba(245, 158, 11, 0.3);
-      }
-
-      .hero-content h2 {
-        font-size: clamp(2.5rem, 4vw, 3.5rem);
-        font-weight: 800;
+      .hero-text h1 {
+        font-size: 2.8rem;
         line-height: 1.2;
-        margin-bottom: 1.5rem;
-        letter-spacing: -1px;
+        margin-bottom: 1rem;
+        color: #2d2424;
       }
 
-      .hero-content h2 span {
-        color: var(--accent-gold);
-      }
-
-      .hero-content p {
+      .hero-text p {
         font-size: 1.1rem;
-        color: #94a3b8;
-        margin-bottom: 2rem;
-        max-width: 600px;
-      }
-
-      .hero-buttons {
-        display: flex;
-        gap: 1rem;
-        flex-wrap: wrap;
+        margin-bottom: 1.5rem;
+        color: #4a3b32;
       }
 
       .btn {
-        padding: 0.85rem 2rem;
-        border-radius: 8px;
-        font-weight: 700;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: var(--transition);
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        border: none;
+        display: inline-block;
+        background-color: #3c2a21;
+        color: #ffffff;
+        padding: 0.8rem 1.6rem;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: background 0.3s ease;
       }
 
-      .btn-primary {
-        background-color: var(--accent-gold);
-        color: var(--primary-navy);
-        box-shadow: 0 4px 14px rgba(245, 158, 11, 0.4);
+      .btn:hover {
+        background-color: #2d2424;
       }
 
-      .btn-primary:hover {
-        background-color: var(--accent-gold-hover);
-        transform: translateY(-2px);
+      .menu-section {
+        max-width: 1100px;
+        margin: 4rem auto;
+        padding: 0 2rem;
       }
 
-      .btn-secondary {
-        background: rgba(255, 255, 255, 0.08);
-        color: var(--white);
-        border: 1px solid rgba(255, 255, 255, 0.2);
-      }
-
-      .btn-secondary:hover {
-        background: rgba(255, 255, 255, 0.15);
-        transform: translateY(-2px);
-      }
-
-      .hero-image-container {
-        flex: 1;
-        min-width: 300px;
-        display: flex;
-        justify-content: center;
-      }
-
-      .hero-card-stack {
-        position: relative;
-        width: 100%;
-        max-width: 480px;
-        height: 380px;
-      }
-
-      .hero-main-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 20px;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
-        border: 4px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .hero-floating-badge {
-        position: absolute;
-        bottom: -20px;
-        left: -20px;
-        background: var(--white);
-        color: var(--primary-navy);
-        padding: 1.25rem;
-        border-radius: 14px;
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      .hero-floating-badge i {
-        font-size: 2rem;
-        color: var(--accent-gold);
-      }
-
-      .hero-floating-badge h4 {
-        font-size: 1.1rem;
-        font-weight: 800;
-      }
-
-      .hero-floating-badge p {
-        font-size: 0.8rem;
-        color: var(--text-light);
-        margin: 0;
-      }
-
-      /* Features / Quick Links Section */
-      .features {
-        padding: 5rem 2rem;
-        max-width: 1280px;
-        margin: 0 auto;
-      }
-
-      .section-header {
+      .section-title {
         text-align: center;
-        max-width: 700px;
-        margin: 0 auto 4rem auto;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: #3c2a21;
       }
 
-      .section-header h2 {
-        font-size: 2.25rem;
-        font-weight: 800;
-        color: var(--primary-navy);
+      .section-subtitle {
+        text-align: center;
+        color: #6d5d53;
+        margin-bottom: 2.5rem;
+      }
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+
+      .menu-card {
+        background-color: #ffffff;
+        border: 1px solid #eae0d5;
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+
+      .menu-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .menu-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
         margin-bottom: 1rem;
-        letter-spacing: -0.5px;
       }
 
-      .section-header p {
-        color: var(--text-light);
-        font-size: 1.05rem;
+      .menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .item-name {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #3c2a21;
+      }
+
+      .item-price {
+        font-weight: 700;
+        color: #c5705d;
+        font-size: 1.1rem;
+      }
+
+      .item-desc {
+        font-size: 0.9rem;
+        color: #6d5d53;
+      }
+
+      .about-section {
+        background-color: #f3e8dc;
+        padding: 4rem 2rem;
+      }
+
+      .about-grid {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .about-text h2 {
+        font-size: 2rem;
+        color: #3c2a21;
+        margin-bottom: 1rem;
+      }
+
+      .about-text p {
+        color: #524439;
+        margin-bottom: 1rem;
       }
 
       .features-grid {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-      }
-
-      .feature-card {
-        background: var(--white);
-        flex: 1;
-        min-width: 250px;
-        max-width: 280px;
-        padding: 2.5rem 2rem;
-        border-radius: 16px;
-        border: 1px solid var(--border-color);
-        transition: var(--transition);
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .feature-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.1);
-        border-color: var(--accent-gold);
-      }
-
-      .feature-icon {
-        width: 60px;
-        height: 60px;
-        background: rgba(245, 158, 11, 0.1);
-        color: var(--accent-gold);
-        border-radius: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 1.5rem;
-        margin-bottom: 1.5rem;
-        transition: var(--transition);
-      }
-
-      .feature-card:hover .feature-icon {
-        background: var(--accent-gold);
-        color: var(--white);
-      }
-
-      .feature-card h3 {
-        font-size: 1.2rem;
-        font-weight: 700;
-        color: var(--primary-navy);
-        margin-bottom: 0.75rem;
-      }
-
-      .feature-card p {
-        font-size: 0.9rem;
-        color: var(--text-light);
-        line-height: 1.5;
-      }
-
-      /* About Section */
-      .about {
-        background-color: var(--white);
-        padding: 6rem 2rem;
-        border-top: 1px solid var(--border-color);
-        border-bottom: 1px solid var(--border-color);
-      }
-
-      .about-container {
-        max-width: 1280px;
-        margin: 0 auto;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 4rem;
-        flex-wrap: wrap;
-      }
-
-      .about-image-wrapper {
-        flex: 1;
-        min-width: 300px;
-        display: flex;
-        justify-content: center;
-      }
-
-      .about-img {
-        width: 100%;
-        max-width: 520px;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 20px;
-        box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
-      }
-
-      .about-content {
-        flex: 1;
-        min-width: 300px;
-      }
-
-      .about-content h2 {
-        font-size: 2.25rem;
-        font-weight: 800;
-        color: var(--primary-navy);
-        margin-bottom: 1.5rem;
-        letter-spacing: -0.5px;
-        line-height: 1.2;
-      }
-
-      .about-content p {
-        color: var(--text-light);
-        margin-bottom: 1.5rem;
-        font-size: 1.05rem;
-      }
-
-      .about-checklist {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        margin-bottom: 2rem;
-      }
-
-      .checklist-item {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        font-weight: 600;
-        color: var(--primary-navy);
-      }
-
-      .checklist-item i {
-        color: var(--accent-gold);
-        font-size: 1.1rem;
-      }
-
-      /* Programs / Academics Section */
-      .academics {
-        padding: 6rem 2rem;
-        max-width: 1280px;
-        margin: 0 auto;
-      }
-
-      .programs-grid {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-      }
-
-      .program-card {
-        background: var(--white);
-        flex: 1;
-        min-width: 260px;
-        max-width: 290px;
-        border-radius: 16px;
-        overflow: hidden;
-        border: 1px solid var(--border-color);
-        transition: var(--transition);
-        display: flex;
-        flex-direction: column;
-      }
-
-      .program-card:hover {
-        transform: translateY(-8px);
-        box-shadow: 0 20px 30px -10px rgba(15, 23, 42, 0.12);
-      }
-
-      .program-img-wrap {
-        height: 180px;
-        overflow: hidden;
-      }
-
-      .program-img-wrap img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: var(--transition);
-      }
-
-      .program-card:hover .program-img-wrap img {
-        transform: scale(1.05);
-      }
-
-      .program-body {
-        padding: 1.75rem;
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-      }
-
-      .program-badge {
-        background-color: rgba(15, 23, 42, 0.05);
-        color: var(--primary-navy);
-        font-size: 0.75rem;
-        font-weight: 700;
-        padding: 0.25rem 0.75rem;
-        border-radius: 50px;
-        align-self: flex-start;
-        margin-bottom: 1rem;
-        text-transform: uppercase;
-      }
-
-      .program-body h3 {
-        font-size: 1.25rem;
-        font-weight: 700;
-        color: var(--primary-navy);
-        margin-bottom: 0.75rem;
-      }
-
-      .program-body p {
-        font-size: 0.9rem;
-        color: var(--text-light);
-        margin-bottom: 1.5rem;
-        flex-grow: 1;
-      }
-
-      .program-link {
-        font-weight: 700;
-        color: var(--primary-navy);
-        display: inline-flex;
-        align-items: center;
-        gap: 0.5rem;
-        font-size: 0.9rem;
-        transition: var(--transition);
-      }
-
-      .program-link:hover {
-        color: var(--accent-gold);
-        gap: 0.75rem;
-      }
-
-      /* Testimonials / News Section */
-      .testimonials {
-        background-color: var(--white);
-        padding: 6rem 2rem;
-        border-top: 1px solid var(--border-color);
-        border-bottom: 1px solid var(--border-color);
-      }
-
-      .testimonials-container {
-        max-width: 1280px;
-        margin: 0 auto;
-      }
-
-      .testimonials-grid {
-        display: flex;
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-      }
-
-      .testimonial-card {
-        background: var(--bg-light);
-        flex: 1;
-        min-width: 300px;
-        max-width: 380px;
-        padding: 2.5rem;
-        border-radius: 16px;
-        border: 1px solid var(--border-color);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        position: relative;
-      }
-
-      .testimonial-card::before {
-        content: "\f109";
-        font-family: "Font Awesome 6 Free";
-        font-weight: 900;
-        position: absolute;
-        top: 1.5rem;
-        right: 2rem;
-        font-size: 2.5rem;
-        color: rgba(15, 23, 42, 0.05);
-      }
-
-      .stars {
-        color: var(--accent-gold);
-        margin-bottom: 1rem;
-        font-size: 0.9rem;
-      }
-
-      .testimonial-card p {
-        font-size: 0.95rem;
-        color: var(--text-dark);
-        font-style: italic;
-        margin-bottom: 2rem;
-        line-height: 1.6;
-      }
-
-      .testimonial-author {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      .author-avatar {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 2px solid var(--accent-gold);
-      }
-
-      .author-info h4 {
-        font-size: 1rem;
-        font-weight: 700;
-        color: var(--primary-navy);
-      }
-
-      .author-info p {
-        font-size: 0.8rem;
-        color: var(--text-light);
-        font-style: normal;
-        margin: 0;
-      }
-
-      /* Footer */
-      footer {
-        background-color: var(--primary-navy);
-        color: var(--white);
-        padding: 5rem 2rem 2rem 2rem;
-      }
-
-      .footer-container {
-        max-width: 1280px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        gap: 3rem;
-        flex-wrap: wrap;
-        padding-bottom: 4rem;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-      }
-
-      .footer-col {
-        flex: 1;
-        min-width: 220px;
-      }
-
-      .footer-col.brand-col {
-        flex: 1.5;
-        min-width: 280px;
-      }
-
-      .footer-col h4 {
-        font-size: 1.1rem;
-        font-weight: 700;
-        margin-bottom: 1.5rem;
-        color: var(--white);
-        position: relative;
-      }
-
-      .footer-col h4::after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -6px;
-        width: 30px;
-        height: 2px;
-        background-color: var(--accent-gold);
-      }
-
-      .footer-col p {
-        color: #94a3b8;
-        font-size: 0.9rem;
-        margin-bottom: 1.5rem;
-        line-height: 1.6;
-      }
-
-      .footer-links {
-        display: flex;
-        flex-direction: column;
-        gap: 0.75rem;
-      }
-
-      .footer-links a {
-        color: #94a3b8;
-        font-size: 0.9rem;
-        transition: var(--transition);
-      }
-
-      .footer-links a:hover {
-        color: var(--accent-gold);
-        padding-left: 5px;
-      }
-
-      .footer-contact-info {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-      }
-
-      .contact-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 0.75rem;
-        color: #94a3b8;
-        font-size: 0.9rem;
-      }
-
-      .contact-item i {
-        color: var(--accent-gold);
-        margin-top: 4px;
-      }
-
-      .social-icons {
-        display: flex;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 1rem;
         margin-top: 1.5rem;
       }
 
-      .social-icons a {
-        width: 38px;
-        height: 38px;
-        background: rgba(255, 255, 255, 0.08);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--white);
-        transition: var(--transition);
+      .feature-box {
+        background-color: #ffffff;
+        padding: 1rem;
+        border-radius: 6px;
+        border-left: 4px solid #e5ba73;
       }
 
-      .social-icons a:hover {
-        background-color: var(--accent-gold);
-        color: var(--primary-navy);
-        transform: translateY(-3px);
+      .feature-box h4 {
+        font-size: 0.95rem;
+        color: #3c2a21;
+        margin-bottom: 0.25rem;
       }
 
-      .footer-bottom {
-        max-width: 1280px;
+      .feature-box p {
+        font-size: 0.8rem;
+        color: #6d5d53;
+        margin: 0;
+      }
+
+      footer {
+        background-color: #2d2424;
+        color: #faf6f0;
+        padding: 3rem 2rem 1.5rem 2rem;
+      }
+      .footer-grid {
+        max-width: 1100px;
         margin: 0 auto;
-        padding-top: 2rem;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 1rem;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 2.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-col h3,
+      .footer-col h4 {
+        color: #e5ba73;
+        margin-bottom: 1rem;
+      }
+
+      .footer-col p {
+        font-size: 0.9rem;
+        color: #d3c5e5;
+        color: #c5baaf;
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        font-size: 0.9rem;
+        color: #c5baaf;
+        transition: color 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: #e5ba73;
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 1.5rem;
+        border-top: 1px solid #4a3b32;
         font-size: 0.85rem;
-        color: #94a3b8;
+        color: #9c8f84;
       }
 
-      .footer-bottom-links {
-        display: flex;
-        gap: 2rem;
+      @media (max-width: 900px) {
+        .menu-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
       }
 
-      .footer-bottom-links a {
-        color: #94a3b8;
-        transition: var(--transition);
-      }
+      @media (max-width: 650px) {
+        .hero-grid,
+        .menu-grid,
+        .about-grid,
+        .features-grid,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
 
-      .footer-bottom-links a:hover {
-        color: var(--accent-gold);
-      }
+        .hero-text h1 {
+          font-size: 2.2rem;
+        }
 
-      /* Responsive Breakpoints adjustments */
-      @media (max-width: 768px) {
-        .navbar {
+        .nav-container {
           flex-direction: column;
           gap: 1rem;
-        }
-        .nav-links {
-          gap: 1rem;
-          justify-content: center;
-        }
-        .hero {
-          padding: 4rem 1rem;
+          text-align: center;
         }
       }
     </style>
   </head>
   <body>
     <header>
-      <nav class="navbar">
-        <div class="logo-container">
-          <div class="logo-icon">TEOE</div>
-          <div class="logo-text">
-            <h1>The Excellence of Education</h1>
-            <span>Schooling System</span>
-          </div>
-        </div>
+      <div class="nav-container">
+        <div class="logo">☕ Bean & Brew</div>
         <ul class="nav-links">
-          <li><a href="#" class="active">Home</a></li>
-          <li><a href="#about">About Us</a></li>
-          <li><a href="#academics">Academics</a></li>
-          <li><a href="#admissions">Admissions</a></li>
-
-          <li><a href="#contact" class="nav-cta">Contact Us</a></li>
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-      </nav>
+      </div>
     </header>
 
-    <section class="hero">
-      <div class="hero-container">
-        <div class="hero-content">
-          <div class="hero-badge">
-            <i class="fa-solid fa-award"></i> Ranked #1 Global Curriculum School
-          </div>
-          <h2>Empowering Minds, <span>Shaping Futures</span></h2>
+    <section id="hero" class="hero">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h1>Freshly Roasted Organic Coffee</h1>
           <p>
-            Welcome to The Excellence Of Eductaion. We foster academic
-            excellence, creative thinking, and moral leadership in a vibrant,
-            inclusive community.
+            Crafted with love by expert baristas. Start your morning with rich
+            aromas and delightful bakery treats.
           </p>
-          <div class="hero-buttons">
-            <a href="#admissions" class="btn btn-primary"
-              >Apply Now <i class="fa-solid fa-arrow-right"></i
-            ></a>
-            <a href="#about" class="btn btn-secondary">Discover More</a>
-          </div>
+          <a href="#menu" class="btn">Explore Menu</a>
         </div>
-        <div class="hero-image-container">
-          <div class="hero-card-stack">
-            <img
-              src="https://placehold.co/480x380/1e293b/f59e0b?text=Campus+Students"
-              alt="Students learning"
-              class="hero-main-img"
-              onerror="
-                this.src =
-                  'https://placehold.co/480x380/0f172a/ffffff?text=Apex+Academy'
-              "
-            />
-            <div class="hero-floating-badge">
-              <i class="fa-solid fa-graduation-cap"></i>
-              <div>
-                <h4>100% Success</h4>
-              
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="features">
-      <div class="section-header">
-        <h2>The Excellence Of Eductaion</h2>
-        <p>
-          Discover what makes our educational model uniquely suited to prepare
-          your child for the challenges of tomorrow.
-        </p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fa-solid fa-chalkboard-user"></i>
-          </div>
-          <h3>Experienced Faculty</h3>
-          <p>
-            World-class educators dedicated to personalized mentorship and
-            interactive learning strategies.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fa-solid fa-flask"></i>
-          </div>
-          <h3>Modern Labs</h3>
-          <p>
-            State-of-the-art science, robotics, and computer labs equipped with
-            cutting-edge technology.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fa-solid fa-palette"></i>
-          </div>
-          <h3>Sports & Arts</h3>
-          <p>
-            Comprehensive athletic arenas and creative art studios to nurture
-            well-rounded talents.
-          </p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fa-solid fa-globe"></i>
-          </div>
-          <h3>Global Curriculum</h3>
-          <p>
-            Internationally recognized syllabus encouraging critical thinking
-            and global citizenship.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="about" id="about">
-      <div class="about-container">
-        <div class="about-image-wrapper">
+        <div class="hero-image">
           <img
-            src="https://placehold.co/520x400/f8fafc/0f172a?text=School+History+Building"
-            alt="School campus history"
-            class="about-img"
-            onerror="
-              this.src =
-                'https://placehold.co/520x400/e2e8f0/0f172a?text=Our+Campus'
-            "
+            src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=700&q=80"
+            alt="Coffee Shop Interior"
           />
         </div>
-        <div class="about-content">
-          <h2>Nurturing Curiosity and Excellence Since 2017</h2>
-          <p>
-            For nearly three decades, The Excellence Of Eductaion has been at
-            the forefront of innovative education. Our mission is to inspire a
-            lifelong passion for learning, integrity, and leadership among
-            students from diverse backgrounds.
-          </p>
-          <div class="about-checklist">
-            <div class="checklist-item">
-              <i class="fa-solid fa-circle-check"></i> Holistic growth combining
-              academics, athletics, and ethics
-            </div>
-            <div class="checklist-item">
-              <i class="fa-solid fa-circle-check"></i> Low student-to-teacher
-              ratio ensuring individual focus
-            </div>
-            <div class="checklist-item">
-              <i class="fa-solid fa-circle-check"></i> Inclusive environment
-              celebrating diversity and collaboration
-            </div>
-          </div>
-          <a
-            href="#contact"
-            class="btn btn-primary"
-            style="background-color: var(--primary-navy); color: var(--white)"
-            >Schedule a Campus Tour</a
-          >
-        </div>
       </div>
     </section>
 
-    <section class="academics" id="academics">
-      <div class="section-header">
-        <h2>Academic Programs</h2>
-        <p>
-          Tailored educational pathways designed to guide students from early
-          childhood all the way to college readiness.
-        </p>
-      </div>
-      <div class="programs-grid">
-        <div class="program-card">
-          <div class="program-img-wrap">
-            <img
-              src="https://placehold.co/290x180/e2e8f0/334155?text=Elementary"
-              alt="Elementary program"
-              onerror="
-                this.src =
-                  'https://placehold.co/290x180/0f172a/ffffff?text=Elementary'
-              "
-            />
-          </div>
-          <div class="program-body">
-            <span class="program-badge">Ages 5 - 10</span>
-            <h3>Elementary School</h3>
-            <p>
-              Building strong foundational literacy, numeracy, and social
-              cooperation through engaging inquiry.
-            </p>
-            <a href="#" class="program-link"
-              >Learn More <i class="fa-solid fa-arrow-right"></i
-            ></a>
-          </div>
-        </div>
-        <div class="program-card">
-          <div class="program-img-wrap">
-            <img
-              src="https://placehold.co/290x180/e2e8f0/334155?text=Middle+School"
-              alt="Middle school program"
-              onerror="
-                this.src =
-                  'https://placehold.co/290x180/0f172a/ffffff?text=Middle+School'
-              "
-            />
-          </div>
-          <div class="program-body">
-            <span class="program-badge">Ages 11 - 13</span>
-            <h3>Middle School</h3>
-            <p>
-              Fostering analytical reasoning, independent study habits, and
-              exploratory scientific projects.
-            </p>
-            <a href="#" class="program-link"
-              >Learn More <i class="fa-solid fa-arrow-right"></i
-            ></a>
-          </div>
-        </div>
-        <div class="program-card">
-          <div class="program-img-wrap">
-            <img
-              src="https://placehold.co/290x180/e2e8f0/334155?text=High+School"
-              alt="High school program"
-              onerror="
-                this.src =
-                  'https://placehold.co/290x180/0f172a/ffffff?text=High+School'
-              "
-            />
-          </div>
-          <div class="program-body">
-            <span class="program-badge">Ages 14 - 18</span>
-            <h3>High School & AP</h3>
-            <p>
-              Rigorous college preparatory tracks, advanced placement courses,
-              and personalized career counseling.
-            </p>
-            <a href="#" class="program-link"
-              >Learn More <i class="fa-solid fa-arrow-right"></i
-            ></a>
-          </div>
-        </div>
-        <div class="program-card">
-          <div class="program-img-wrap">
-            <img
-              src="https://placehold.co/290x180/e2e8f0/334155?text=Extracurriculars"
-              alt="Extracurricular activities"
-              onerror="
-                this.src =
-                  'https://placehold.co/290x180/0f172a/ffffff?text=Activities'
-              "
-            />
-          </div>
-          <div class="program-body">
-            <span class="program-badge">All Grades</span>
-            <h3>Extracurriculars</h3>
-            <p>
-              Over 30 clubs covering debate, robotics, fine arts, music
-              ensemble, and competitive sports leagues.
-            </p>
-            <a href="#" class="program-link"
-              >Learn More <i class="fa-solid fa-arrow-right"></i
-            ></a>
-          </div>
-        </div>
-      </div>
-    </section>
+    <section id="menu" class="menu-section">
+      <h2 class="section-title">Our Specials</h2>
+      <p class="section-subtitle">Handcrafted drinks & fresh daily pastries</p>
 
-    <section class="testimonials" id="campus">
-      <div class="testimonials-container">
-        <div class="section-header">
-          <h2>What Parents & Students Say</h2>
-          <p>
-            Hear firsthand experiences from members of our thriving academic
-            community.
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=500&q=80"
+            alt="Caramel Latte"
+          />
+          <div class="menu-header">
+            <span class="item-name">Caramel Latte</span>
+            <span class="item-price">$4.50</span>
+          </div>
+          <p class="item-desc">
+            Rich espresso blended with steamed milk and sweet house-made caramel
+            drizzle.
           </p>
         </div>
-        <div class="testimonials-grid">
-          <div class="testimonial-card">
-            <div>
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <p>
-                "The Excellence Of Education transformed my daughter's approach
-                to learning. The teachers are incredibly supportive, and the
-                facilities are world-class."
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-info">
-                <h4>Mr Ahmed</h4>
-                <p>Parent of 8th Grader</p>
-              </div>
-            </div>
+
+        <div class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=500&q=80"
+            alt="Espresso Roast"
+          />
+          <div class="menu-header">
+            <span class="item-name">Dark Espresso</span>
+            <span class="item-price">$3.25</span>
           </div>
-          <div class="testimonial-card">
-            <div>
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <p>
-                "The robotics club and advanced science labs gave me a huge
-                advantage when applying to university engineering programs.
-                Truly an amazing school!"
-              </p>
-            </div>
-            <div class="testimonial-author">
-              <div class="author-info">
-                <h4>Mr Ali</h4>
-                <p>Parent of Class VI</p>
-              </div>
-            </div>
+          <p class="item-desc">
+            A bold double shot brewed from our signature dark-roasted Colombian
+            beans.
+          </p>
+        </div>
+
+        <div class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80"
+            alt="Butter Croissant"
+          />
+          <div class="menu-header">
+            <span class="item-name">Butter Croissant</span>
+            <span class="item-price">$3.75</span>
           </div>
-          <div class="testimonial-card">
-            <div>
-              <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-              </div>
-              <p>
-                "A wonderful environment that balances rigorous academics with
-                strong moral values. We couldn't have asked for a better school
-                for our sons."
-              </p>
+          <p class="item-desc">
+            Flaky, golden-brown pastry baked fresh every morning in our kitchen.
+          </p>
+        </div>
+
+        <div class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=500&q=80"
+            alt="Iced Matcha Latte"
+          />
+          <div class="menu-header">
+            <span class="item-name">Iced Matcha</span>
+            <span class="item-price">$4.80</span>
+          </div>
+          <p class="item-desc">
+            Premium ceremonial Japanese green tea whisked with almond milk over
+            ice.
+          </p>
+        </div>
+
+        <div class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80"
+            alt="Avocado Toast"
+          />
+          <div class="menu-header">
+            <span class="item-name">Avocado Toast</span>
+            <span class="item-price">$6.50</span>
+          </div>
+          <p class="item-desc">
+            Smashed fresh avocado on toasted sourdough topped with chili flakes
+            and seeds.
+          </p>
+        </div>
+
+        <div class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500&q=80"
+            alt="Berry Muffin"
+          />
+          <div class="menu-header">
+            <span class="item-name">Blueberry Muffin</span>
+            <span class="item-price">$3.50</span>
+          </div>
+          <p class="item-desc">
+            Moist baked muffin loaded with fresh organic wild blueberries.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="about-grid">
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=700&q=80"
+            alt="Barista preparing coffee"
+          />
+        </div>
+        <div class="about-text">
+          <h2>Our Story & Passion</h2>
+          <p>
+            Founded in 2021, Bean & Brew Cafe was built on a simple promise:
+            serve exceptionally delicious coffee in a warm, welcoming space.
+          </p>
+          <p>
+            We source our coffee beans directly from fair-trade farms across
+            Central America and Africa, ensuring ethical practices and supreme
+            flavor quality.
+          </p>
+
+          <div class="features-grid">
+            <div class="feature-box">
+              <h4>🌱 100% Organic</h4>
+              <p>Ethically sourced beans</p>
             </div>
-            <div class="testimonial-author">
-              <div class="author-info">
-                <h4>Mr and Mrs & Faizan</h4>
-                <p>Parents of position holder</p>
-              </div>
+            <div class="feature-box">
+              <h4>🥐 Baked Daily</h4>
+              <p>Fresh oven pastries</p>
+            </div>
+            <div class="feature-box">
+              <h4>📶 Free Wi-Fi</h4>
+              <p>Cozy workspace setup</p>
+            </div>
+            <div class="feature-box">
+              <h4>🐾 Pet Friendly</h4>
+              <p>Outdoor patio seating</p>
             </div>
           </div>
         </div>
       </div>
     </section>
-
     <footer id="contact">
-      <div class="footer-container">
-        <div class="footer-col brand-col">
-          <div class="logo-container" style="margin-bottom: 1rem">
-            <div
-              class="logo-icon"
-              style="background: var(--accent-gold); color: var(--primary-navy)"
-            >
-              TEOE
-            </div>
-            <div class="logo-text">
-              <h1 style="color: var(--white)">The Excellence Of Eductaion</h1>
-            </div>
-          </div>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>☕ Bean & Brew Cafe</h3>
           <p>
-            Inspiring young minds to achieve their highest potential through
-            dedication, exploration, and global standards of excellence.
+            Your local neighborhood coffee spot for great conversations, cozy
+            work corners, and artisanal espresso.
           </p>
-          <div class="social-icons">
-            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-            <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-          </div>
         </div>
         <div class="footer-col">
           <h4>Quick Links</h4>
           <ul class="footer-links">
-            <li><a href="#">Home</a></li>
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#menu">Our Menu</a></li>
             <li><a href="#about">About Us</a></li>
-            <li><a href="#academics">Academics</a></li>
-            <li><a href="#admissions">Admissions</a></li>
-            <li><a href="#campus">Campus Life</a></li>
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Programs</h4>
-          <ul class="footer-links">
-            <li><a href="#">Elementary School</a></li>
-            <li><a href="#academics">Middle School</a></li>
-            <li><a href="#academics">High School & AP</a></li>
-            <li><a href="#academics">Extracurriculars</a></li>
-            <li><a href="#">Summer Camp</a></li>
-          </ul>
+          <h4>Visit Us</h4>
+          <p>123 Coffee Lane, Suite 4</p>
+          <p>Mon - Sun: 7:00 AM - 7:00 PM</p>
+          <p>hello@beanandbrew.com</p>
         </div>
-        <div class="footer-col">
-          <h4>Contact Info</h4>
-          <div class="footer-contact-info">
-            <div class="contact-item">
-              <i class="fa-solid fa-location-dot"></i>
-              <span>Sector 5c/1. Main Road , North Karachi, Karachi</span>
-            </div>
-            <div class="contact-item">
-              <i class="fa-solid fa-phone"></i>
-              <span>0333-2135454</span>
-            </div>
-            <div class="contact-item">
-              <i class="fa-solid fa-envelope"></i>
-              <span>admission@teoe.pk</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    
       </div>
     </footer>
   </body>
