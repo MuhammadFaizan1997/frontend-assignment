@@ -1,0 +1,511 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bean & Brew Cafe | Modern Coffee Shop</title>
+
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #faf6f0;
+        color: #2d2424;
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 8px;
+      }
+
+      header {
+        background-color: #3c2a21;
+        color: #ffffff;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .nav-container {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #e5ba73;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+      }
+
+      .nav-links a {
+        font-size: 0.95rem;
+        font-weight: 500;
+        transition: color 0.3s ease;
+      }
+
+      .nav-links a:hover {
+        color: #e5ba73;
+      }
+
+      .hero {
+        background-color: #e5ba73;
+        color: #2d2424;
+        padding: 4rem 2rem;
+      }
+
+      .hero-grid {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+        align-items: center;
+      }
+
+      .hero-text h1 {
+        font-size: 2.8rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+        color: #2d2424;
+      }
+
+      .hero-text p {
+        font-size: 1.1rem;
+        margin-bottom: 1.5rem;
+        color: #4a3b32;
+      }
+
+      .btn {
+        display: inline-block;
+        background-color: #3c2a21;
+        color: #ffffff;
+        padding: 0.8rem 1.6rem;
+        border-radius: 6px;
+        font-weight: 600;
+        transition: background 0.3s ease;
+      }
+
+      .btn:hover {
+        background-color: #2d2424;
+      }
+
+      .menu-section {
+        max-width: 1100px;
+        margin: 4rem auto;
+        padding: 0 2rem;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+        color: #3c2a21;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        color: #6d5d53;
+        margin-bottom: 2.5rem;
+      }
+      .menu-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+      }
+
+      .menu-card {
+        background-color: #ffffff;
+        border: 1px solid #eae0d5;
+        border-radius: 10px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s ease;
+      }
+
+      .menu-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .menu-card img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 1rem;
+      }
+
+      .menu-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 0.5rem;
+      }
+
+      .item-name {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #3c2a21;
+      }
+
+      .item-price {
+        font-weight: 700;
+        color: #c5705d;
+        font-size: 1.1rem;
+      }
+
+      .item-desc {
+        font-size: 0.9rem;
+        color: #6d5d53;
+      }
+
+      .about-section {
+        background-color: #f3e8dc;
+        padding: 4rem 2rem;
+      }
+
+      .about-grid {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+      }
+
+      .about-text h2 {
+        font-size: 2rem;
+        color: #3c2a21;
+        margin-bottom: 1rem;
+      }
+
+      .about-text p {
+        color: #524439;
+        margin-bottom: 1rem;
+      }
+
+      .features-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        margin-top: 1.5rem;
+      }
+
+      .feature-box {
+        background-color: #ffffff;
+        padding: 1rem;
+        border-radius: 6px;
+        border-left: 4px solid #e5ba73;
+      }
+
+      .feature-box h4 {
+        font-size: 0.95rem;
+        color: #3c2a21;
+        margin-bottom: 0.25rem;
+      }
+
+      .feature-box p {
+        font-size: 0.8rem;
+        color: #6d5d53;
+        margin: 0;
+      }
+
+      footer {
+        background-color: #2d2424;
+        color: #faf6f0;
+        padding: 3rem 2rem 1.5rem 2rem;
+      }
+      .footer-grid {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        gap: 2.5rem;
+        margin-bottom: 2rem;
+      }
+
+      .footer-col h3,
+      .footer-col h4 {
+        color: #e5ba73;
+        margin-bottom: 1rem;
+      }
+
+      .footer-col p {
+        font-size: 0.9rem;
+        color: #d3c5e5;
+        color: #c5baaf;
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links {
+        list-style: none;
+      }
+
+      .footer-links li {
+        margin-bottom: 0.5rem;
+      }
+
+      .footer-links a {
+        font-size: 0.9rem;
+        color: #c5baaf;
+        transition: color 0.3s ease;
+      }
+
+      .footer-links a:hover {
+        color: #e5ba73;
+      }
+
+      .copyright {
+        text-align: center;
+        padding-top: 1.5rem;
+        border-top: 1px solid #4a3b32;
+        font-size: 0.85rem;
+        color: #9c8f84;
+      }
+
+      @media (max-width: 900px) {
+        .menu-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .footer-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+
+      @media (max-width: 650px) {
+        .hero-grid,
+        .menu-grid,
+        .about-grid,
+        .features-grid,
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-text h1 {
+          font-size: 2.2rem;
+        }
+
+        .nav-container {
+          flex-direction: column;
+          gap: 1rem;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="nav-container">
+        <div class="logo">☕ Bean & Brew</div>
+        <ul class="nav-links">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <section id="hero" class="hero">
+      <div class="hero-grid">
+        <div class="hero-text">
+          <h1>Freshly Roasted Organic Coffee</h1>
+          <p>
+            Crafted with love by expert baristas. Start your morning with rich
+            aromas and delightful bakery treats.
+          </p>
+          <a href="#menu" class="btn">Explore Menu</a>
+        </div>
+        <div class="hero-image">
+          <img
+            src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=700&q=80"
+            alt="Coffee Shop Interior"
+          />
+        </div>
+      </div>
+    </section>
+
+    <section id="menu" class="menu-section">
+      <h2 class="section-title">Our Specials</h2>
+      <p class="section-subtitle">Handcrafted drinks & fresh daily pastries</p>
+
+      <div class="menu-grid">
+        <div class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1541167760496-1628856ab772?auto=format&fit=crop&w=500&q=80"
+            alt="Caramel Latte"
+          />
+          <div class="menu-header">
+            <span class="item-name">Caramel Latte</span>
+            <span class="item-price">$4.50</span>
+          </div>
+          <p class="item-desc">
+            Rich espresso blended with steamed milk and sweet house-made caramel
+            drizzle.
+          </p>
+        </div>
+
+        <div class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=500&q=80"
+            alt="Espresso Roast"
+          />
+          <div class="menu-header">
+            <span class="item-name">Dark Espresso</span>
+            <span class="item-price">$3.25</span>
+          </div>
+          <p class="item-desc">
+            A bold double shot brewed from our signature dark-roasted Colombian
+            beans.
+          </p>
+        </div>
+
+        <div class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=500&q=80"
+            alt="Butter Croissant"
+          />
+          <div class="menu-header">
+            <span class="item-name">Butter Croissant</span>
+            <span class="item-price">$3.75</span>
+          </div>
+          <p class="item-desc">
+            Flaky, golden-brown pastry baked fresh every morning in our kitchen.
+          </p>
+        </div>
+
+        <div class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1517256064527-09c73fc73e38?auto=format&fit=crop&w=500&q=80"
+            alt="Iced Matcha Latte"
+          />
+          <div class="menu-header">
+            <span class="item-name">Iced Matcha</span>
+            <span class="item-price">$4.80</span>
+          </div>
+          <p class="item-desc">
+            Premium ceremonial Japanese green tea whisked with almond milk over
+            ice.
+          </p>
+        </div>
+
+        <div class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1509440159596-0249088772ff?auto=format&fit=crop&w=500&q=80"
+            alt="Avocado Toast"
+          />
+          <div class="menu-header">
+            <span class="item-name">Avocado Toast</span>
+            <span class="item-price">$6.50</span>
+          </div>
+          <p class="item-desc">
+            Smashed fresh avocado on toasted sourdough topped with chili flakes
+            and seeds.
+          </p>
+        </div>
+
+        <div class="menu-card">
+          <img
+            src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=500&q=80"
+            alt="Berry Muffin"
+          />
+          <div class="menu-header">
+            <span class="item-name">Blueberry Muffin</span>
+            <span class="item-price">$3.50</span>
+          </div>
+          <p class="item-desc">
+            Moist baked muffin loaded with fresh organic wild blueberries.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="about-grid">
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=700&q=80"
+            alt="Barista preparing coffee"
+          />
+        </div>
+        <div class="about-text">
+          <h2>Our Story & Passion</h2>
+          <p>
+            Founded in 2021, Bean & Brew Cafe was built on a simple promise:
+            serve exceptionally delicious coffee in a warm, welcoming space.
+          </p>
+          <p>
+            We source our coffee beans directly from fair-trade farms across
+            Central America and Africa, ensuring ethical practices and supreme
+            flavor quality.
+          </p>
+
+          <div class="features-grid">
+            <div class="feature-box">
+              <h4>🌱 100% Organic</h4>
+              <p>Ethically sourced beans</p>
+            </div>
+            <div class="feature-box">
+              <h4>🥐 Baked Daily</h4>
+              <p>Fresh oven pastries</p>
+            </div>
+            <div class="feature-box">
+              <h4>📶 Free Wi-Fi</h4>
+              <p>Cozy workspace setup</p>
+            </div>
+            <div class="feature-box">
+              <h4>🐾 Pet Friendly</h4>
+              <p>Outdoor patio seating</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer id="contact">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>☕ Bean & Brew Cafe</h3>
+          <p>
+            Your local neighborhood coffee spot for great conversations, cozy
+            work corners, and artisanal espresso.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Home</a></li>
+            <li><a href="#menu">Our Menu</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Visit Us</h4>
+          <p>123 Coffee Lane, Suite 4</p>
+          <p>Mon - Sun: 7:00 AM - 7:00 PM</p>
+          <p>hello@beanandbrew.com</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
